@@ -185,8 +185,86 @@ nav ul li a:hover { color: var(--accent-blue); }
     cursor: pointer;
 }
 
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablets and Small Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .sports-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 5%;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-left: 0; /* Remove the left margin for centered stack */
+    }
+
+    .hero {
+        padding: 3rem 5%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .announcement {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .comeback-text {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+
+    .sports-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .modal-content {
+        padding: 2rem 1.5rem;
+        margin: 20% auto;
+        width: 95%;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        width: 100%; /* Full width button for easier tapping */
+        text-align: center;
+    }
+}
+
 /* Style the options for dark theme browsers */
 .input-group select option {
     background-color: #1e293b;
     color: white;
+
 }
