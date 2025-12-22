@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS ODC Tournament | Elite Sports Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="svg-bg" id="svg-container"></div>
+
+    <header>
+        <nav>
+            <div class="logo">SS ODC <span>TOURNAMENT</span></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#sports" class="btn-reg">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="announcement">THE WAIT IS OVER</div>
+            <h1>Ignite the <span>Spirit</span> of Competition</h1>
+            <h2 class="comeback-text">— And it's back. —</h2>
+            <p>The ultimate arena for SS ODC athletes. Choose your discipline and claim glory.</p>
+            <div class="cta-group">
+                <a href="#sports" class="btn-primary">Explore Sports</a>
+            </div>
+        </section>
+
+        <section class="sports-grid" id="sports">
+            <div class="card">
+                <div class="icon">🏏</div>
+                <h3>Cricket</h3>
+                <p>Smash the boundaries and dominate the pitch. It's time for maximum intensity!</p>
+                <button class="reg-btn">Register</button>
+            </div>
+            <div class="card">
+                <div class="icon">🏸</div>
+                <h3>Badminton</h3>
+                <p>Defy gravity and unleash thunderous smashes. Pure speed, pure power.</p>
+                <button class="reg-btn">Register</button>
+            </div>
+            <div class="card">
+                <div class="icon">🏃</div>
+                <h3>Kho Kho</h3>
+                <p>The ultimate test of lightning reflexes and strategic chases. Can you keep up?</p>
+                <button class="reg-btn">Register</button>
+            </div>
+            <div class="card">
+                <div class="icon">🏐</div>
+                <h3>Volleyball</h3>
+                <p>Own the air! Spike your way to victory in a battle of grit and teamwork.</p>
+                <button class="reg-btn">Register</button>
+            </div>
+            <div class="card">
+                <div class="icon">🏓</div>
+                <h3>Table Tennis</h3>
+                <p>Mind-bending spin and split-second reactions. Total precision at high velocity.</p>
+                <button class="reg-btn">Register</button>
+            </div>
+            <div class="card">
+                <div class="icon">⚽</div>
+                <h3>Foosball</h3>
+                <p>Fast hands, iron focus, and goal-scoring madness. Control the table, rule the game!</p>
+                <button class="reg-btn">Register</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="regModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Register for <span id="selectedSportText">Sport</span></h2>
+            <form id="registrationForm">
+                <input type="hidden" id="sportName">
+                
+                <div class="input-group">
+                    <input type="text" id="userName" placeholder="Full Name" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="userEmail" placeholder="Work Email" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="teamName" placeholder="Team Name (Optional)">
+                </div>
+
+                <div class="input-group" id="cricketFields" style="display: none;">
+                    <select id="playerRole">
+                        <option value="" disabled selected>Select Your Role</option>
+                        <option value="Batter">Batter</option>
+                        <option value="Bowler">Bowler</option>
+                        <option value="All-Rounder">All-Rounder</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn">Confirm Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
